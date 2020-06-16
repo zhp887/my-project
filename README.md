@@ -123,3 +123,10 @@ vue CLI：https://cli.vuejs.org/
 	 在App.js组件中，使用内置组件<router-view></router-view>容器来放置匹配成功的组件
 	 使用<router-link></router-link>实现页面的跳转
 
+3、路由的三个问题
+	1）安装与配置：设计路径和组件配置关系（一一对应关系）
+	2）和路径url匹配成功和组件，放在哪里进行展示？（router-view容器）
+	3）如何改变url？（router-link声明式路由，编程式路由）
+
+
+
