@@ -1,6 +1,6 @@
 <template>
     <div>
-        <h2>我的</h2>
+        <h2>B</h2>
     </div>
 </template>
 <script>
@@ -8,8 +8,6 @@ export default {
     
 }
 </script>
-<style lang="css" scoped>
-div>h2{
-    text-align :center
-}
+<style>
+
 </style>
