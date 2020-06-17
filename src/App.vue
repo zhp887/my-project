@@ -38,12 +38,68 @@
 // import World from './components/World.vue'
 export default {
   name: 'App',
+  watch:{
+    $route:function(to,from){
+      console.log('watch',to,from)
+    }
+  },
   components: {
     // HelloWorld
   },
   mounted(){
     console.log('路由.$route',this.$route)
     console.log('路由.$router',this.$router)
+    console.log('vuex',this.$store)
+
+    // 调用cnode接口
+    // fetch({
+    //   url:'/topics',
+    //   method:'get',
+    //   params:{page:1,limit:5,tab:'ask',mdrender:'false'}
+    // }).then(res=>{
+    //   console.log('请求成功',res)
+    // })
+
+    let params = {
+      ct:24,
+      qqmusic_ver:1298,
+      new_json:1,
+      remoteplace:'txt.yqq.song',
+      searchid: 54616638128860322,
+      t:0,
+      aggr:1,
+      cr:1,
+      catZhida:1,
+      lossless:0,
+      flag_qc:0,
+      p:1,
+      n:10,
+      w:'周杰伦',
+      g_tk_new_20200303:5381,
+      g_tk:5381,
+      loginUin:0,
+      hostUin:0,
+      format:'json',
+      inCharset:'utf8',
+      outCharset:'utf-8',
+      notice:0,
+      platform:'yqq.json',
+      needNewCode:0
+    }
+    console.log('params',params)
+
+    // 调用QQ音乐接口
+    // fetch({
+    //   url:'/soso/fcgi-bin/client_search_cp',
+    //   method:'get',
+    //   params:params
+    // }).then(res=>{
+    //   console.log('QQ',res)
+    // }).catch(err=>{
+    //   console.log('qq',err)
+    // }).finally(()=>{
+    //   console.log('无论成功或失败，我都会被打印出来')
+    // })
   },
   methods:{
     //this.$route 中记录当前url的各种匹配关系
